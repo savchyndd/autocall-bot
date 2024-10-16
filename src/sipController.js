@@ -38,8 +38,8 @@ initializeGlobalObjects();
 
 const audioFilePath = path.join(__dirname, "audio", "audio_8khz_10s.wav");
 const telephony = {
-  sipInternalNumber: "909",
-  login: "yt2497ov",
+  sipInternalNumber: process.env.SIP_INTERNAL_NUMBER,
+  login: process.env.SIP_LOGIN,
 };
 const extraHeaders = [`line: ${telephony.sipInternalNumber}${telephony.login}`];
 
